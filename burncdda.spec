@@ -5,9 +5,8 @@ Version:	1.3.7
 Release:	1
 License:	GPL
 Group:		Applications/Sound
-Source0:	http://thenktor.bei.t-online.de/%{name}/download/%{name}-%{version}.tar.gz
+Source0:	http://thenktor.bei.t-online.de/burncdda/download/%{name}-%{version}.tar.gz
 # Source0-md5:	6d67e7150eedc3611b9e45f79cab2941
-# Source0-size:	14989
 URL:		http://thenktor.bei.t-online.de/burncdda/
 Requires:	cdrdao
 Requires:	cdrecord
@@ -39,7 +38,10 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_sysconfdir},%{_mandir}/man1}
 
 sed "s|/bin/sh|/bin/bash|" burncdda > $RPM_BUILD_ROOT%{_bindir}/burncdda
 install burncdda.conf $RPM_BUILD_ROOT%{_sysconfdir}
-install %{name}.1.gz $RPM_BUILD_ROOT%{_mandir}/man1
+gzip -dc %{name}.1.gz > $RPM_BUILD_ROOT%{_mandir}/man1/%{name}.1
+
+# let rpm find shell dependency
+chmod +x $RPM_BUILD_ROOT%{_bindir}/burncdda
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,4 +51,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGELOG
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.1*
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/burncdda.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/burncdda.conf
