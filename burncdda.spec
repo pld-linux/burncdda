@@ -23,13 +23,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 burnCDDA is a console based frontend to cdrdao, cdrecord, mpg123,
 ogg123, normalize and mp3_check written in sh. It can be used to copy
-audio CDs or to create audio CDs from a m3u playlist
+audio CDs or to create audio CDs from a M3U playlist
 
 %description -l pl
 burnCDDA jest dzia³aj±c± na terminalu nak³adk± do programów cdrdao,
 cdrecord, mpg123, ogg123, normalize i mp3_check, napisan± w sh. Mo¿e
 byæ u¿ywana do kopiowania p³yt CD Audio oraz tworzenia ich z playlist
-m3u.
+M3U.
 
 %prep
 %setup -q
