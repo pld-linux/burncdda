@@ -9,7 +9,6 @@ Source0:	http://thenktor.bei.t-online.de/%{name}/download/%{name}-%{version}.tar
 # Source0-md5:	6d67e7150eedc3611b9e45f79cab2941
 # Source0-size:	14989
 URL:		http://thenktor.bei.t-online.de/burncdda/
-Requires:	/bin/bash
 Requires:	cdrdao
 Requires:	cdrecord
 Requires:	dialog
