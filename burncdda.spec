@@ -32,8 +32,6 @@ install burncdda $RPM_BUILD_ROOT%{_bindir}
 install burncdda.conf $RPM_BUILD_ROOT%{_sysconfdir}
 install %{name}.1.gz $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf CHANGELOG LICENSE
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -42,7 +40,7 @@ echo "Please edit %{_sysconfdir}/burncdda.conf now!"
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGELOG LICENSE
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.1*
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/burncdda.conf
