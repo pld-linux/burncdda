@@ -2,7 +2,7 @@ Summary:	A frontend to cdrdao, cdrecord, mpg123, ogg123, and normalize
 Summary(pl):	Frontend do cdrdao, cdrecord, mpg123, ogg123 i normalize
 Name:		burncdda
 Version:	1.2.9
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://thenktor.bei.t-online.de/%{name}/%{name}-%{version}.tar.gz
