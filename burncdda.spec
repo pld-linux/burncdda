@@ -48,7 +48,7 @@ echo "Please edit %{_sysconfdir}/burncdda.conf now!"
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGELOG LICENSE
+%doc CHANGELOG
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.1*
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/burncdda.conf
