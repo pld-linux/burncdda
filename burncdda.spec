@@ -2,12 +2,19 @@ Summary:	A frontend to cdrdao, cdrecord, mpg123, ogg123, and normalize
 Summary(pl):	Frontend do cdrdao, cdrecord, mpg123, ogg123 i normalize
 Name:		burncdda
 Version:	1.2.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://thenktor.bei.t-online.de/burncdda/%{name}-%{version}.tar.gz
 URL:		http://thenktor.bei.t-online.de/burncdda/
-Requires:	cdrdao, cdrecord, mpg123, normalize, vorbis-tools, sox, mp3_check
+Requires:	cdrdao
+Requires:	cdrecord
+Requires:	mpg123
+Requires:	normalize
+Requires:	vorbis-tools
+Requires:	sox
+Requires:	mp3_check
+Requires:	/bin/bash
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,7 +35,7 @@ m3u.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_sysconfdir},%{_mandir}/man1}
 
-install burncdda $RPM_BUILD_ROOT%{_bindir}
+sed "s|/bin/sh|/bin/bash|" burncdda > $RPM_BUILD_ROOT%{_bindir}/burncdda
 install burncdda.conf $RPM_BUILD_ROOT%{_sysconfdir}
 install %{name}.1.gz $RPM_BUILD_ROOT%{_mandir}/man1
 
