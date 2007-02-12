@@ -1,5 +1,5 @@
 Summary:	A frontend to cdrdao, cdrecord, mpg123, ogg123, and normalize
-Summary(pl.UTF-8):   Frontend do cdrdao, cdrecord, mpg123, ogg123 i normalize
+Summary(pl.UTF-8):	Frontend do cdrdao, cdrecord, mpg123, ogg123 i normalize
 Name:		burncdda
 Version:	1.3.7
 Release:	1
