@@ -1,5 +1,5 @@
 Summary:	A frontend to cdrdao, cdrecord, mpg123, ogg123, and normalize
-Summary(pl):	Frontend do cdrdao, cdrecord, mpg123, ogg123 i normalize
+Summary(pl.UTF-8):   Frontend do cdrdao, cdrecord, mpg123, ogg123 i normalize
 Name:		burncdda
 Version:	1.3.7
 Release:	1
@@ -23,10 +23,10 @@ burnCDDA is a console based frontend to cdrdao, cdrecord, mpg123,
 ogg123, normalize and mp3_check written in sh. It can be used to copy
 audio CDs or to create audio CDs from a M3U playlist
 
-%description -l pl
-burnCDDA jest dzia³aj±c± na terminalu nak³adk± do programów cdrdao,
-cdrecord, mpg123, ogg123, normalize i mp3_check, napisan± w sh. Mo¿e
-byæ u¿ywana do kopiowania p³yt CD Audio oraz tworzenia ich z playlist
+%description -l pl.UTF-8
+burnCDDA jest dziaÅ‚ajÄ…cÄ… na terminalu nakÅ‚adkÄ… do programÃ³w cdrdao,
+cdrecord, mpg123, ogg123, normalize i mp3_check, napisanÄ… w sh. MoÅ¼e
+byÄ‡ uÅ¼ywana do kopiowania pÅ‚yt CD Audio oraz tworzenia ich z playlist
 M3U.
 
 %prep
